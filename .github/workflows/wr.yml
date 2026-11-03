@@ -1,0 +1,10 @@
+name: WR
+on:
+  workflow_run:
+    workflows: ["A"]
+    types: [completed]
+jobs:
+  wr:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "WR RAN"
